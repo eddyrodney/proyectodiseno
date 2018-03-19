@@ -79,9 +79,22 @@ header a:hover{
   font-weight: bold;
 }
 
+.blanca{
+  color : white;
+  text-shadow: 2px 2px #FF0000;
+}
+
+.avatares{
+  border-radius: 50%;
+}
+
 #showcase{
   min-height: 400px;
-  background:url(../img/showcase.jpg) no-repeat 0 ;
+  background:url(../img/proyectos.jpg) no-repeat 0;
+  background-repeat: no-repeat;
+  background-size: 2500px 500px;
+  background-position: center;
+  background-attachment: fixed;
   text-align: center;
 
 }
