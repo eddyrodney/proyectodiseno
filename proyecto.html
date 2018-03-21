@@ -9,6 +9,8 @@
     <meta name="author" content="Eddy Rodney Balbuena">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="./js/js.js"></script>
   </head>
   <body>
     <header>
@@ -51,25 +53,8 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@mdo</td> 
+              <tr id="datos">
+                
               </tr>
             </tbody>
         </table>
@@ -77,25 +62,25 @@
         <aside id="sidebar">
           <div class="dark">
             <h3>Crea un Proyecto</h3>
-            <form action="#" class="cita">
+            <form action="proyecto.html" class="cita">
               <div>
                 <label>Título</label><br />
-                <input type="text" placeholder="Título del Proyecto">
+                <input type="text" placeholder="Título del Proyecto" id="titulo">
               </div>
               <div>
                 <label>Descripción</label><br />
-                <textarea placeholder="Descripción del Proyecto"></textarea>
+                <textarea placeholder="Descripción del Proyecto" id="descripcion"></textarea>
               </div>
               <div>
                 <label>Fecha de Inicio</label><br />
-                <input type="date" placeholder="Fecha de Inicio">
+                <input type="date" placeholder="Fecha de Inicio" id="fechaini">
               </div>
               <div>
                 <label>Fecha Fin</label><br />
-                <input type="date" placeholder="Fecha Fin">
+                <input type="date" placeholder="Fecha Fin" id="fechafin">
               </div>
               <div>
-                <input type="submit" class="button_1"></input>
+                <input type="submit" class="button_1" id="boton"></input>
               </div>
             </form>
           </div>
