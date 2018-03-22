@@ -2,8 +2,11 @@
 $( document ).ready(function() {
 	if(localStorage.getItem("data")){
 		let objeto = JSON.parse(localStorage.getItem("data"));
-		$("#datos").html(`<th scope='row'>${objeto.id}</th><td>${objeto.titulo}</td><td>${objeto.descripcion}</td><td>${objeto.fechaini}</td><td>${objeto.fechafin}</td>`);
-		console.log(objeto);
+		console.log(objeto.datos)
+		
+		$(`#datos`).html(`<th scope='row' id='datos${objeto.id}'>${objeto.id}</th><td>${objeto.titulo}</td><td>${objeto.descripcion}</td><td>${objeto.fechaini}</td><td>${objeto.fechafin}</td></th>`).before(objeto.datos);
+		
+		$("#ultimo").html(`<p><strong>Código: </strong>${objeto.id}</p><p><strong>Título: </strong>${objeto.titulo}<p><strong>Descripción: </strong>${objeto.descripcion}</p><p><strong>Fecha de Inicio: </strong>${objeto.fechaini}</p><p><strong>Fecha Fin Estimada: </strong>${objeto.fechafin}</p>`);
 	}
 	else
 	{
@@ -44,10 +47,13 @@ $( document ).ready(function() {
 			titulo : $("#titulo").val(),
 			descripcion : $("#descripcion").val(),
 			fechaini : $("#fechaini").val(),
-			fechafin : $("#fechafin").val()
+			fechafin : $("#fechafin").val(),
+			datos : $("#datos").html()
 		}
 
 		localStorage.setItem("data", JSON.stringify(data));
+
+		console.log(JSON.stringify(data.datos));
 
 		alert("Proyecto creado satisfactoriamente.");
 
