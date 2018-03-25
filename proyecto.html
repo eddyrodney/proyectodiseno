@@ -8,6 +8,7 @@
     <meta name="keywords" content="Proyectos">
     <meta name="author" content="Eddy Rodney Balbuena">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modal-style.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/bootstrap-grid.css">
     <link rel="stylesheet" href="./css/bootstrap-reboot.css">
@@ -54,6 +55,7 @@
                 <th scope="col">Descrición</th>
                 <th scope="col">Fecha Inicio</th>
                 <th scope="col">Fecha Fin</th>
+                <th scope="col">Acciones</th>
               </tr>
             </thead>
             <tbody>
@@ -89,6 +91,79 @@
             </form>
           </div>
         </aside>
+      </div>
+
+      <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="informacion-modal">
+                <div class="divTable blueTable">
+                  <div class="divTableHeading">
+                    <div class="divTableRow">
+                      <div class="divTableHead"><strong><h4>Valor</h4></strong></div>
+                      <div class="divTableHead"><strong><h4>Descripción</h4></strong></div>
+                    </div>
+                  </div>
+                  <div class="divTableBody">
+                      <div class="divTableRow">
+                        <div class="divTableCell"><h5>Código:</h5></div>
+                        <div class="divTableCell" id='tabla-codigo'>&nbsp;</div>
+                      </div>
+                      <div class="divTableRow">
+                        <div class="divTableCell"><h5>Título:</h5></div>
+                        <div class="divTableCell" id='tabla-titulo'>&nbsp;</div>
+                      </div>
+                      <div class="divTableRow">
+                        <div class="divTableCell"><h5>Descripción:</h5></div>
+                        <div class="divTableCell" id='tabla-descripcion'>&nbsp;</div>
+                      </div>
+                      <div class="divTableRow">
+                        <div class="divTableCell"><h5>Fecha inicio:</h5></div>
+                        <div class="divTableCell" id='tabla-fechaini'>&nbsp;</div>
+                      </div>
+                      <div class="divTableRow">
+                        <div class="divTableCell"><h5>Fecha Final Estimada:</h5></div>
+                        <div class="divTableCell" id='tabla-fechafin'>&nbsp;</div>
+                      </div>
+                      <div class="divTableRow">
+                        <div class="divTableCell"><h5>Jefe de Proyecto:</h5></div>
+                        <div class="divTableCell" id='tabla-fege'>
+                          <select class="form-control" id="jefe">
+                            <option>No Definido</option>
+                            <option>Jose Canseco</option>
+                            <option>Barry Bons</option>
+                            <option>Sammy Sosa</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="divTableRow">
+                        <div class="divTableCell"><h5>Tareas:</h5></div>
+                        <div class="divTableCell" id='tabla-tareas'><div align='right'><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button></div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+    
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <footer>
