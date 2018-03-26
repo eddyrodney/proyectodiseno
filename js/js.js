@@ -1,5 +1,6 @@
 
 $( document ).ready(function() {
+
 	if(localStorage.getItem("data")){
 		let objeto = JSON.parse(localStorage.getItem("data"));
 		console.log(objeto.datos)
@@ -27,6 +28,7 @@ $( document ).ready(function() {
 
 	});
 
+	
 	function save_data(){
 		
 		if(JSON.parse(localStorage.getItem("data")))
@@ -95,6 +97,16 @@ $( document ).ready(function() {
 	        modal.style.display = "none";
 	    }
 	}
+
+	$("#ex6").slider();
+	$("#ex6").on("slide", function(slideEvt) {
+		$("#ex6SliderVal").text(slideEvt.value);
+	});
+
+	$("#ex7").slider();
+	$("#ex7").on("slide", function(slideEvt) {
+		$("#ex7SliderVal").text(slideEvt.value);
+	});
 
     
 });
